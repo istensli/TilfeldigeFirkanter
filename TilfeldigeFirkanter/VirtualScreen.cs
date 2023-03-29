@@ -25,7 +25,7 @@ namespace TilfeldigeFirkanter
             {
                 _rows[i].AddBoxMiddleRow(box.X, box.Width);
             }
-           _rows[box.EndY].AddBoxBottomRow(box.X, box.Width);
+           _rows[box.EndY].AddBoxBottomRow(box.X, box.Width); //her kan indeks havne utenfor arrayen..
 
         }
         public void Show() 
