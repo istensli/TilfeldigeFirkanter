@@ -21,11 +21,11 @@ namespace TilfeldigeFirkanter
         public void Add(Box box) 
         {
             _rows[box.Y].AddBoxTopRow(box.X, box.Width);
-            for (int i = box.StartY+1; i < box.EndY; i++) //box.EndY-1
+            for (int i = box.StartY+1; i < box.EndY-1; i++) //box.EndY-1
             {
                 _rows[i].AddBoxMiddleRow(box.X, box.Width);
             }
-           _rows[box.EndY].AddBoxBottomRow(box.X, box.Width); //her kan indeks havne utenfor arrayen..
+           _rows[box.EndY-1].AddBoxBottomRow(box.X, box.Width); //her kan indeks havne utenfor arrayen..ikke nå lenger..
 
         }
         public void Show() 

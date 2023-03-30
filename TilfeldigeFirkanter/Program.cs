@@ -30,7 +30,8 @@
         private static Box[] CreateBoxes()
         {
             var random = new Random();
-            var boxes = new Box[3];
+            int randomNumberOfBoxes = random.Next(0, 10);
+            var boxes = new Box[randomNumberOfBoxes];//3
             for (var i = 0; i < boxes.Length; i++)
             {
                 boxes[i] = new Box(random, _width, _height);
